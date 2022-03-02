@@ -1,0 +1,23 @@
+<div>
+    <form (ngSubmit)="buscarUp()" >
+        <label for="">Ingresa El pais del cual quieres ver las Universidades</label>
+        <input type="text" placeholder="Ingresa el nombre del País" [(ngModel)]="busc"  class="form-control" name="busc" />
+    </form>
+    <table>
+        <thead>
+            <th>País</th>
+            <th>Universidad</th>
+            <th>Estado</th>
+            <th>provincia</th>
+        </thead>
+        <tbody *ngFor="let uni of infobusc">
+            <tr>
+                <td>{{uni.country}}</td>
+                <td>{{uni.name}}</td>
+                <td>{{uni.web_pages}}</td>
+                <td>{{uni.domains}}</td> 
+         
+            </tr>
+        </tbody>
+</table>
+></div>
